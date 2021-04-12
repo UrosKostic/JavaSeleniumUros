@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.*;
 
-import java.awt.*;
-
 public class DreamLandTest extends BaseTest
 {
         @Test
@@ -23,7 +21,6 @@ public class DreamLandTest extends BaseTest
         System.out.println("Message shown:"+messageGreeting.getText());
         Assert.assertTrue("Greeting message not shown!", messageGreeting.getText().contains("Pozdrav, Uros Kostic!"));
 
-        Thread.sleep(2000);//just to see what happens
         }
 
         @Test
@@ -38,7 +35,6 @@ public class DreamLandTest extends BaseTest
             System.out.println("Message shown:" + negativeMessage.getText());
             Assert.assertTrue("Negative message not shown!", negativeMessage.getText().contains("Invalid login or password."));
 
-            Thread.sleep(2000);//just to see what happens
         }
 
         @Test
@@ -53,8 +49,6 @@ public class DreamLandTest extends BaseTest
             System.out.println("Message shown:"+messageEmailSent.getText());
             Assert.assertTrue("Message NOT present!", messageEmailSent.getText().contains("Email je poslat"));
 
-
-            Thread.sleep(2000); //just for check
         }
 
         @Test
@@ -75,8 +69,6 @@ public class DreamLandTest extends BaseTest
             Assert.assertEquals("Numbers are NOT same",dreamLandHotelresults.hotelCounter,dreamLandHotelresults.allNamedHotels.size());
 
 
-            Thread.sleep(2000); //just to see
-
         }
 
         @Test
@@ -94,7 +86,6 @@ public class DreamLandTest extends BaseTest
             Assert.assertTrue("Confirmation message not shown!", travelConfirmation.getText().contains("e dodat u korpu"));
             Assert.assertTrue("Checkout button not present!",zavrsiKupovinuButton.isDisplayed());
 
-            Thread.sleep(2000); //just to see
         }
 
 

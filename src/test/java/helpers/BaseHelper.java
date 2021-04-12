@@ -1,6 +1,5 @@
 package helpers;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +15,6 @@ public class BaseHelper
 
     public static void navigateToUrl (String url)
     {
-        //Go to some url like https://the-internet.herokuapp.com/login
         driver.get(url);
     }
     public static void clickOnElement (WebElement element)
